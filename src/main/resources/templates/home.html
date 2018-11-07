@@ -12,7 +12,7 @@
     <nav th:replace="fragments/fragment :: navbar"></nav>
 
     <div class="container-fluid">
-        <h2 th:text=" 'Hello' + ${#httpServletRequest.remoteUser} + '!' ">Login as</h2>
+        <h2 th:text=" 'Hello ' + ${#httpServletRequest.remoteUser} + '!' ">Login as</h2>
         <div class="row">
             <div class="col-md-6">
                 <div class="card">
@@ -22,15 +22,15 @@
                     <div class="card-body">
                        <form th:action="@{/user/addUser}" method="post">
                            <div class="roe form-group">
-                               <label class="col-sm-4"> User Name:	</label>
+                               <label class="col-sm-4">User Name:</label>
                                <input class="col-sm-8 form-control input-sm" type="text" name="username"/>
                            </div>
                            <div class="roe form-group">
-                               <label class="col-sm-4"> Password:	</label>
+                               <label class="col-sm-4">Password:</label>
                                <input class="col-sm-8 form-control input-sm" type="password" name="password"/>
                            </div>
                            <div class="roe form-group">
-                               <label class="col-sm-4"> Role:	</label>
+                               <label class="col-sm-4">Role:</label>
                                <input class="col-sm-8 form-control input-sm" type="text" name="role"/>
                            </div>
                            <div>
