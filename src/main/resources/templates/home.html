@@ -17,6 +17,35 @@
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-header">
+                        Tambah User Baru
+                    </div>
+                    <div class="card-body">
+                       <form th:action="@{/user/addUser}" method="post">
+                           <div class="roe form-group">
+                               <label class="col-sm-4"> User Name:	</label>
+                               <input class="col-sm-8 form-control input-sm" type="text" name="username"/>
+                           </div>
+                           <div class="roe form-group">
+                               <label class="col-sm-4"> Password:	</label>
+                               <input class="col-sm-8 form-control input-sm" type="password" name="password"/>
+                           </div>
+                           <div class="roe form-group">
+                               <label class="col-sm-4"> Role:	</label>
+                               <input class="col-sm-8 form-control input-sm" type="text" name="role"/>
+                           </div>
+                           <div>
+                               <button type="submit" class="btn btn-primary">Simpan</button>
+                           </div>
+                       </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
                         Tambah Pilot
                     </div>
                     <div class="card-body">
