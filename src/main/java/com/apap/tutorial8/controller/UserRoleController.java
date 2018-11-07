@@ -31,6 +31,11 @@ public class UserRoleController {
 			model.addAttribute("notSameAsOld", true);
 			return "home";
 		}
+//		cek condisi pw
+		if (!userService.checkCondition(newPassword)) {
+			model.addAttribute("notLikeCondition", true);
+			return "home";
+		}
 //		cek reconfirm
 		if (!userService.checkMatchPas(newPassword,newPasswordConfirm)) {
 			model.addAttribute("notReconfirmed", true);

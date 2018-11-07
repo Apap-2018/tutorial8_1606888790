@@ -8,4 +8,5 @@ public interface UserRoleService {
 	UserRoleModel findUserByUsername(String username);
 	boolean checkCurrentPassword(UserRoleModel user, String oldPassword);
 	boolean checkMatchPas(String newPassword, String newPasswordConfirm);
+	boolean checkCondition(String password);
 }

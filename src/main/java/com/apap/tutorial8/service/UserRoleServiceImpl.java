@@ -42,4 +42,26 @@ public class UserRoleServiceImpl implements UserRoleService {
 		return newPassword.equals(newPasswordConfirm);
 	}
 
+	@Override
+	public boolean checkCondition(String password) {
+		boolean passwordContainsDigit = false;
+	    boolean passwordContainsLetter = false;
+
+	    if (!(password.length() >= 8)){
+	        return false;
+	    }
+
+	    for (char c : password.toCharArray()) {
+	    	if (Character.isDigit(c)) {
+	            passwordContainsDigit = true;
+	        }
+	    }
+	    
+	    if (!passwordContainsDigit)
+	        return false;
+	    
+	    passwordContainsLetter = password.matches(".*[a-zA-Z]+.*");
+	    return passwordContainsLetter;
+	}
+
 }

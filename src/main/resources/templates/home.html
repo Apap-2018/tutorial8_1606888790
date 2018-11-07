@@ -58,6 +58,7 @@
                         		<input class="col-sm-8 form-control input-sm" type="password" name="oldPassword"/>
                         	</div>
                         	<div class="row form-group">
+                        		<label th:if="${notLikeCondition}" class="col-sm-3">Password minimal terdiri dari 8 suku kata dan mengandung huruf-angka</label>
                         		<label class="col-sm-4">Password Baru: </label>
                         		<input class="col-sm-8 form-control input-sm" type="password" name="newPassword"/>
                         	</div>
